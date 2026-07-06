@@ -16,10 +16,12 @@ QUARTZ_LICENSE = "MIT (Open Climate Fix); open NWP inputs, no API key"
 
 INSTALL_HINT = (
     "quartz-solar-forecast is not installed. It pins pydantic==2.6.2 (conflicts "
-    "with the MCP SDK) so it is not auto-installed; add it alongside with: "
+    "with the MCP SDK) so it is not auto-installed; in a Python 3.11 environment "
+    "(pv-site-prediction requires <3.12) add it alongside with: "
     "pip install --no-deps quartz-solar-forecast && pip install "
     "pv-site-prediction xarray xgboost openmeteo-requests requests-cache "
-    "retry-requests  (see the solar-data-mcp-forecast README)"
+    "retry-requests huggingface_hub async_timeout  (macOS also needs: "
+    "brew install libomp; see the solar-data-mcp-forecast README)"
 )
 
 
